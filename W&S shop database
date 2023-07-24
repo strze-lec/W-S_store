@@ -1,0 +1,1903 @@
+CREATE DATABASE W&S shop;
+
+USE W&S shop; 
+
+CREATE TABLE products    
+	(product_id 	int 		PRIMARY KEY,    
+	category 	varchar(100),    
+	gender		varchar(100),        
+	age_group 	varchar(100),    
+    	price 		numeric(*,5)   
+    );
+
+/* In Oracle autoincrement method works by using a sequence,
+so I've created the sequence to generate product_id number */
+
+CREATE SEQUENCE seq_product_id  
+MINVALUE 1  
+START WITH 1  
+INCREMENT BY 1  
+CACHE 10 
+NOCYCLE;
+
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES (seq_product_id.nextval, 'shoes', 'female', 'teen', 119.89);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'teen', 33.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'teen', 48.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'teen', 88.55);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'teen', 77.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'adult', 84.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'adult', 88.55);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'adult', 22.55);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'teen', 111.88);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'adult', 119.00);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'adult', 88.55);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'teen', 55.98);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'child', 89.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'child', 22.33);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'male', 'child',23.44);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'child', 85.33);
+
+INSERT INTO products (product_id, category, gender, age_group, price)     
+    VALUES 
+	(seq_product_id.nextval,'shoes', 'female', 'adult', 84.58);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shoes', 'male', 'adult', 10.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 99.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'adult', 68.25);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 17.75);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'female', 'adult', 45.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 29.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 46.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'child', 32.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'adult', 20.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'teen', 61.75);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 92.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'female', 'adult', 16.35);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 55.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'child', 39.45);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'adult', 27.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'teen', 84.95);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 74.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'female', 'adult', 18.85);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 51.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'child', 37.95);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'adult', 25.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'teen', 78.45);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 68.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'female', 'adult', 14.35);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 47.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'child', 34.45);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'adult', 22.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'teen', 85.95);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 77.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'female', 'adult', 17.85);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 49.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'child', 35.95);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'adult', 23.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'teen', 77.45);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'male', 'child', 67.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'female', 'adult', 15.35);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'teen', 48.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 't-shirt', 'male', 'child', 33.45);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shirt', 'female', 'adult', 21.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'child', 70.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'female', 'teen', 42.75);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 95.25);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'teen', 82.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 45.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 126.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'teen', 75.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 38.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 110.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'teen', 95.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 48.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 122.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'teen', 85.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 58.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 107.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'teen', 92.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 65.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 133.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'teen', 95.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 68.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 127.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'teen', 105.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 78.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 136.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'teen', 105.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 88.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 130.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'teen', 110.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'child', 98.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 126.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'child', 75.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'teen', 47.75);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'male', 'adult', 100.25);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'child', 87.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'female', 'teen', 50.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'male', 'adult', 123.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'child', 80.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'teen', 53.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 117.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'child', 95.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'female', 'teen', 58.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'male', 'adult', 131.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'child', 88.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'teen', 61.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 125.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'child', 105.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'female', 'teen', 68.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'male', 'adult', 141.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'child', 108.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'teen', 81.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 145.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'child', 115.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'female', 'teen', 78.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'male', 'adult', 151.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'male', 'child', 128.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'male', 'teen', 101.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'female', 'adult', 160.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jeans', 'female', 'child', 125.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'shorts', 'female', 'teen', 88.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'pants', 'male', 'adult', 171.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'child', 76.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'teen', 95.25);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'adult', 122.35);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'child', 68.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'female', 'teen', 86.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'male', 'adult', 139.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'child', 55.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'teen', 76.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'adult', 95.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'child', 52.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'female', 'teen', 78.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'male', 'adult', 122.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'child', 64.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'teen', 89.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'adult', 105.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'child', 46.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'female', 'teen', 81.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'male', 'adult', 135.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'child', 59.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'teen', 84.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'adult', 98.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'child', 49.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'female', 'teen', 77.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'male', 'adult', 130.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'child', 62.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'teen', 83.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'male', 'adult', 115.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'female', 'child', 42.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweater', 'female', 'teen', 79.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'sweatshirt', 'male', 'adult', 132.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'child', 97.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'teen', 112.25);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'adult', 142.35);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'child', 78.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'teen', 96.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'adult', 169.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'child', 82.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'teen', 124.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'adult', 109.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'child', 76.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'teen', 102.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'adult', 149.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'child', 88.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'teen', 134.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'adult', 123.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'child', 72.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'teen', 98.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'adult', 181.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'child', 94.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'teen', 145.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'adult', 132.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'child', 69.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'teen', 105.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'adult', 174.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'child', 92.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'teen', 139.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'adult', 159.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'child', 65.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'teen', 112.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'adult', 189.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'child', 76.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'teen', 93.45);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'adult', 132.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'child', 79.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'teen', 105.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'adult', 157.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'child', 82.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'teen', 99.95);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'adult', 136.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'child', 83.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'teen', 110.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'adult', 164.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'child', 87.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'teen', 106.95);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'adult', 142.10);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'child', 89.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'teen', 112.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'adult', 169.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'child', 92.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'teen', 116.25);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'adult', 148.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'child', 95.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'teen', 120.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'adult', 174.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'child', 97.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'teen', 126.85);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'female', 'adult', 156.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'male', 'child', 101.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'jacket', 'male', 'teen', 132.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'coat', 'female', 'adult', 189.00);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'child', 34.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'teen', 5.75);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 78.35);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 3.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 47.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 17.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 24.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 9.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 61.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 2.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 39.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 12.30);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 18.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 7.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 85.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 1.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 53.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 11.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 21.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 8.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 92.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 3.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 59.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 15.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 27.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 6.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 78.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 2.99);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 43.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 9.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 16.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 5.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 73.70);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 2.50);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 49.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 8.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 14.20);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 4.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 66.80);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'child', 2.75);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'female', 'teen', 36.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'male', 'adult', 11.60);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'child', 20.40);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'accessory', 'female', 'teen', 7.90);
+
+INSERT INTO products (product_id, category, gender, age_group, price) 
+VALUES (seq_product_id.nextval, 'bag', 'male', 'adult', 88.70);
+
+/* First I had created column 'price' in the 'products' table, but then
+I've realized I should implement normalization rules, so I created
+separate table 'prices'. */
+
+CREATE TABLE prices    
+(product_id_prices int NOT NULL, 
+    price_p	numeric(*,5) NOT NULL);
+
+/* Due to the fact that Oracle triggered errors when I tried to move data
+from products to prices table using entries written like this: prices.product_id or products.price,
+so I gave the columns in prices table different names and later on I renamed
+them to keep the data consistent. */
+
+INSERT INTO prices (product_id_prices, price_p) 
+SELECT product_id, price 
+FROM products;
+
+ALTER TABLE prices 
+ADD CONSTRAINT fk_constraint_name 
+FOREIGN KEY (product_id_prices) 
+REFERENCES products(product_id);
+
+ALTER TABLE prices  
+RENAME COLUMN product_id_prices to product_id;
+
+ALTER TABLE prices  
+RENAME COLUMN price_p to price;
+
+/*As a last step I have deleted the price column, 
+so I don't double the data.*/
+
+ALTER TABLE products 
+DROP COLUMN price;
+
+CREATE TABLE sales ( 
+sales_id INT, 
+order_id INT, 
+product_id INT, 
+quantity INT,
+ 
+PRIMARY KEY(sales_id), 
+FOREIGN KEY(product_id) REFERENCES products(product_id) 
+);
+
+/* I created sequence to autoincrement sales_id number. */
+
+CREATE SEQUENCE seq_sales_id   
+MINVALUE 1   
+START WITH 1   
+INCREMENT BY 1   
+CACHE 10  
+NOCYCLE;
+
+INSERT INTO sales (sales_id, order_id,product_id,quantity) 
+VALUES (seq_sales_id.nextval, 1, 116, 1);
+
+INSERT INTO sales (sales_id, order_id,product_id,quantity) 
+VALUES (seq_sales_id.nextval, 1, 117, 2);
+
+INSERT INTO sales (sales_id, order_id,product_id,quantity) 
+VALUES (seq_sales_id.nextval, 1, 23, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 44, 23, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 17, 109, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 85, 233, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 94, 3, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 95, 44, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 14, 56, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 26, 94, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 6, 58, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 77, 28, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 10, 41, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 32, 63, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 31, 96, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 17, 195, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 21, 12, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 83, 158, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 59, 242, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 17, 148, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 76, 124, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 92, 182, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 99, 187, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 37, 234, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 12, 220, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 44, 38, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 21, 178, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 7, 160, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 59, 217, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 55, 39, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 81, 201, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 100, 151, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 46, 121, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 7, 88, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 98, 74, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 59, 114, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 67, 99, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 92, 81, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 20, 29, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 35, 43, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 74, 144, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 20, 71, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 32, 228, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 6, 75, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 79, 165, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 19, 230, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 66, 109, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 7, 188, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 81, 169, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 62, 135, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 23, 119, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 53, 179, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 65, 31, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 10, 71, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 75, 80, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 60, 220, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 21, 203, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 55, 79, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 30, 3, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 53, 175, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 43, 169, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 22, 235, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 76, 160, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 17, 14, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 73, 73, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 67, 42, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 76, 181, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 64, 59, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 78, 82, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 69, 80, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 24, 40, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 47, 34, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 49, 151, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 19, 194, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 35, 66, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 62, 69, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 58, 46, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 72, 176, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 82, 223, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 68, 203, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 1, 23, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 20, 36, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 12, 227, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 6, 160, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 16, 154, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 7, 227, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 71, 178, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 71, 132, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 20, 236, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 82, 243, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 13, 246, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 1, 188, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 34, 217, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 64, 131, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 65, 51, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 73, 230, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 15, 186, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 39, 48, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 35, 43, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 2, 28, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 2, 242, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 28, 228, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 32, 227, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 57, 200, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 12, 52, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 63, 162, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 11, 116, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 95, 166, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 76, 33, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 89, 51, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 5, 10, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 17, 216, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 42, 67, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 72, 69, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 89, 158, 4);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 92, 91, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 32, 18, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 39, 212, 3);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 177, 170, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 187, 143, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 134, 52, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 175, 202, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 196, 28, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 138, 87, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 175, 12, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 171, 14, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 107, 55, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 166, 221, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 118, 30, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 169, 59, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 175, 207, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 166, 183, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 132, 162, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 165, 205, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 126, 125, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 146, 61, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 191, 13, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 147, 185, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 102, 36, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 144, 44, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 105, 48, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 126, 151, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 144, 63, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 194, 200, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 104, 232, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 167, 81, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 123, 1, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 188, 238, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 171, 232, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 134, 85, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 122, 120, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 139, 193, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 101, 218, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 144, 162, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 126, 194, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 172, 159, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 140, 200, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 143, 119, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 186, 125, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 196, 233, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 139, 133, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 124, 50, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 129, 237, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 119, 160, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 162, 87, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 187, 71, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 171, 131, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 100, 141, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 191, 171, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 108, 34, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 151, 201, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 159, 207, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 107, 155, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 152, 56, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 127, 234, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 194, 229, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 261, 242, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 266, 233, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 293, 194, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 297, 220, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 267, 112, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 98, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 251, 135, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 240, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 207, 77, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 201, 240, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 248, 130, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 33, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 265, 75, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 287, 189, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 273, 98, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 239, 7, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 176, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 281, 126, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 291, 231, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 201, 35, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 271, 68, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 131, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 296, 69, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 208, 72, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 210, 170, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 193, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 287, 31, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 229, 126, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 264, 46, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 174, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 227, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 234, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 267, 33, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 284, 58, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 243, 108, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 250, 176, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 257, 9, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 220, 62, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 295, 57, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 249, 242, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 261, 81, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 82, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 54, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 197, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 267, 4, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 57, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 233, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 208, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 207, 222, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 98, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 216, 215, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 240, 24, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 213, 144, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 239, 175, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 230, 18, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 204, 67, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 66, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 49, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 225, 238, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 215, 22, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 273, 172, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 212, 228, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 184, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 198, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 62, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 257, 156, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 252, 80, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 295, 210, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 222, 237, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 270, 157, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 189, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 275, 16, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 142, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 245, 180, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 297, 77, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 280, 226, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 47, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 275, 202, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 216, 182, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 129, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 245, 145, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 23, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 219, 247, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 238, 177, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 293, 41, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 258, 226, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 220, 4, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 236, 68, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 265, 202, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 270, 136, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 5, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 214, 198, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 261, 63, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 242, 62, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 221, 62, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 157, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 290, 4, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 205, 241, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 225, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 214, 236, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 246, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 205, 148, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 283, 17, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 223, 86, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 289, 233, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 243, 102, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 271, 76, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 221, 142, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 218, 231, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 262, 224, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 233, 98, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 258, 214, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 295, 36, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 159, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 286, 30, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 233, 241, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 288, 87, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 281, 248, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 247, 110, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 208, 210, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 149, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 288, 146, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 290, 25, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 212, 102, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 234, 164, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 276, 211, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 265, 5, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 299, 100, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 299, 123, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 240, 211, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 248, 63, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 201, 130, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 286, 222, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 256, 162, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 236, 195, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 215, 204, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 283, 235, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 292, 142, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 156, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 239, 87, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 254, 6, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 263, 194, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 297, 219, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 288, 186, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 146, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 167, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 257, 156, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 255, 229, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 240, 83, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 209, 246, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 269, 48, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 205, 53, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 241, 19, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 215, 230, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 211, 38, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 18, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 273, 175, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 269, 42, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 202, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 286, 234, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 212, 93, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 225, 61, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 243, 72, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 244, 239, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 254, 36, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 249, 26, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 259, 42, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 271, 159, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 291, 48, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 209, 49, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 205, 14, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 225, 239, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 41, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 232, 120, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 275, 245, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 155, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 207, 69, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 255, 251, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 155, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 226, 199, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 197, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 257, 192, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 210, 92, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 244, 240, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 244, 148, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 217, 96, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 150, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 276, 213, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 226, 128, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 282, 11, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 276, 121, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 200, 229, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 276, 14, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 118, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 252, 107, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 153, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 213, 102, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 245, 182, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 208, 87, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 263, 201, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 116, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 277, 11, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 298, 227, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 290, 206, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 255, 189, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 253, 148, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 261, 242, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 266, 233, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 293, 194, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 297, 220, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 267, 112, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 98, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 251, 135, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 240, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 207, 77, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 201, 240, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 248, 130, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 33, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 265, 75, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 287, 189, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 273, 98, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 239, 7, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 176, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 281, 126, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 291, 231, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 201, 35, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 271, 68, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 131, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 296, 69, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 208, 72, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 210, 170, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 193, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 287, 31, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 229, 126, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 264, 46, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 174, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 227, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 234, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 267, 33, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 284, 58, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 243, 108, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 250, 176, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 257, 9, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 220, 62, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 295, 57, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 249, 242, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 261, 81, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 82, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 227, 54, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 197, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 267, 4, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 57, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 233, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 208, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 207, 222, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 98, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 216, 215, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 240, 24, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 213, 144, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 239, 175, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 230, 18, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 204, 67, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 268, 66, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 49, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 225, 238, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 215, 22, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 273, 172, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 212, 228, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 184, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 198, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 62, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 257, 156, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 252, 80, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 295, 210, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 222, 237, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 270, 157, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 237, 189, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 275, 16, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 202, 142, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 245, 180, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 297, 77, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 280, 226, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 47, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 275, 202, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 216, 182, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 246, 129, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 245, 145, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 274, 23, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 219, 247, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 238, 177, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 293, 41, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 258, 226, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 220, 4, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 236, 68, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 265, 202, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 270, 136, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 5, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 214, 198, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 261, 63, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 242, 62, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 221, 62, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 157, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 290, 4, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 205, 241, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 294, 225, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 214, 236, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 231, 246, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 205, 148, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 283, 17, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 223, 86, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 289, 233, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 243, 102, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 271, 76, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 221, 142, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 218, 231, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 262, 224, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 233, 98, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 258, 214, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 295, 36, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 272, 159, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 286, 30, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 233, 241, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 288, 87, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 281, 248, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 247, 110, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 208, 210, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 279, 149, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 288, 146, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 290, 25, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 212, 102, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 234, 164, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 276, 211, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 265, 5, 2);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 299, 100, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 299, 123, 1);
+
+INSERT INTO sales (sales_id, order_id, product_id, quantity) VALUES (seq_sales_id.nextval, 240, 211, 2);
+
+/* After inserting all the data I have decided to add type of purchase
+and payment method, which is shown in the next lines of the code. */
+
+ALTER TABLE sales 
+ADD purchase_type varchar(20);
+
+UPDATE sales 
+SET purchase_type =  
+    CASE WHEN order_id IN (177, 92, 122, 262, 6, 211, 42, 288, 283, 202, 75, 247, 275, 83, 187, 169, 220, 258, 147, 216, 234, 171, 248, 207, 284, 60, 95, 34, 74, 65, 102, 53, 221, 165, 266, 72, 274, 71, 76, 139, 69, 46, 201, 62, 282, 100, 152, 196, 17, 280, 261, 265, 89, 279, 229, 237, 243, 20, 226, 294, 175, 21, 101, 209, 118, 1, 134, 242, 44, 16, 290, 188, 85, 2, 208, 257, 186, 246, 213, 73, 19, 39, 138, 191, 166, 132, 259, 23, 210, 99, 123, 78, 245, 98, 200, 172, 240, 22, 238, 295, 286, 129, 167, 32, 194, 124, 244, 253, 296, 119, 49, 14, 13, 47, 218, 82, 105, 239, 126, 230, 267, 146, 151, 64, 15, 263, 251, 254, 264, 271, 287, 289, 144, 58) 
+    THEN 'online' 
+    ELSE 'store' 
+    END;
+
+ALTER TABLE sales 
+ADD payment_method varchar(20);
+
+UPDATE sales 
+SET payment_method =  
+    CASE WHEN order_id IN (177, 92, 122, 262, 258, 71, 76, 139, 69, 46, 201, 62, 282, 100, 152, 196, 17, 280, 261, 265, 89, 279, 229, 237, 243, 20,  
+    226, 294, 175, 21, 101, 209, 118, 1, 134, 242, 44, 16, 290, 188, 85, 2, 208, 257, 186, 246, 213, 73, 19, 39, 138, 191, 166, 132, 259, 23, 210, 99, 123, 78, 245, 98, 200, 172, 240, 22, 238, 295,  
+    286, 129, 167, 218, 82, 105, 239, 126, 230, 267, 146, 151, 64, 15, 263, 251, 254, 264, 271, 287, 289, 144, 58) 
+    THEN 'money transfer' 
+    WHEN order_id IN(6, 211, 42, 288, 283, 202, 75, 247, 275, 83, 187, 169, 220, 32, 194, 124, 244, 253, 296, 119, 49, 14, 13, 47) THEN 'card' 
+    WHEN order_id IN(147, 216, 234, 171, 248, 207, 284, 60, 95, 34, 74, 65, 102, 53, 221, 165, 266, 72, 274) THEN 'gift card' 
+    ELSE 'cash' 
+    END;
+
+/*I decided the table needed more card payments.*/
+UPDATE sales 
+SET payment_method = 'card' 
+    WHERE order_id IN (241,269,225,249,276,268,272,57,127,293,281,231,281,255,205,227,236,270,205,214,212,77,31,37,12,7,55,81,67,35,79,66,7,81,10,30);
