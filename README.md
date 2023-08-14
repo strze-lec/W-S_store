@@ -5,4 +5,6 @@
 
 I have created the database and its schema on my own, without supporting myself with online resources. That's why this project has a characteristic of a trial-and-error which I deliberately left to be seen in the code.
 
-<b>Database used:</b> Oracle (important, since the code may not run 100% properly on other databases).
+<b>Database used:</b> Oracle (important, since the code may not run 100% properly on other databases). 
+
+🔄 THOROUGH DESCRIPTION IN PROGRESS 🔄
